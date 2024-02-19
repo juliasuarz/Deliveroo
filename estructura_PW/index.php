@@ -14,8 +14,9 @@
     <!-- ENLACE AL SCRIPT JS EXTERNO -->
     <!-- OPCIONAL ENLACE ESTILOS BOOTSTRAP -->
     <!-- ENLACE ESTILOS LESS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
+<body style="margin: 0;">
     <!-- div de todo el body -->
     <div>
         <!-- div del HEADER -->
@@ -53,23 +54,61 @@
             </div>
         </div>
         <!-- FOOTER -->
-        <div>
-            <footer>
-                <div>
-                    <nav>
-                        <div>
+        <div style="color:white; font-family: plex-sans,sans-serif; display: block;">
+            <footer style="background-color: rgb(46, 51, 51);">
+                <div style="width:100%; padding: 16px; overflow: hidden;">
+                    <nav style="display: flex; margin-top:30px; justify-content:center">
+                        <div style="background-color: rgb(67, 72, 72); width: 20%; padding:24px">
                             <!-- div de Discover Deliveroo -->
+                            <h3 style="padding-left: 40px;">Discover Deliveroo</h3>
+                            <ul style="list-style-type: none;">
+                                <li><p>Investors</p></li>
+                                <li><p>About us</p></li>
+                                <li><p>Takeaway</p></li>
+                                <li><p>More</p></li>
+                                <li><p>Newsroom</p></li>
+                                <li><p>Engineering blog</p></li>
+                                <li><p>Design blog</p></li>
+                                <li><p>Gift Cards</p></li>
+                                <li><p>Deliveroo Students</p></li>
+                                <li><p>Careers</p></li>
+                                <li><p>Restaurant signup</p></li>
+                                <li><p>Become a rider</p></li>
+                            </ul>
                         </div>
-                        <div>
+                        <div style="background-color: rgb(67, 72, 72); width:20%; margin-left: 16px; padding:24px">
                             <!-- div de Legal -->
+                            <h3 style="padding-left: 40px;">Legal</h3>
+                            <ul style="list-style-type: none;">
+                                <li><p>Terms and conditions</p></li>
+                                <li><p>Privacy</p></li>
+                                <li><p>Cookies</p></li>
+                                <li><p>Modern Slavery Statement</p></li>
+                                <li><p>Tax Strategy</p></li>
+                                <li><p>Section 172 Statement</p></li>
+                                <li><p>Public Authority Requests</p></li>
+                            </ul>
                         </div>
-                        <div>
+                        <div style="background-color: rgb(67, 72, 72); width:20%; margin-left:16px; padding:24px">
                             <!-- div de Help -->
+                            <h3 style="padding-left: 40px;">Help</h3>
+                            <ul style="list-style-type: none;">
+                                <li><p>Contact</p></li>
+                                <li><p>FAQs</p></li>
+                                <li><p>Cuisines</p></li>
+                                <li><p>Brands</p></li>
+                            </ul>
                         </div>
                     </nav>
-                    <nav>
-                        <!-- etiqueta <ul> que contiene las redes sociales y formas de contactar -->
-                        <!-- etiqueta <p> que contiene el texto de Copyright -->
+                    <nav style="padding-top:16px; display: flex; justify-content: space-between;">
+                        <div style="display: flex; align-items: center; padding-left:290px; padding-bottom:10px">
+                            <!-- Redes sociales -->
+                            <i class="bi bi-facebook" style="font-size:24px"></i>
+                            <i class="bi bi-twitter" style="padding-left: 8px; font-size:24px"></i>
+                            <i class="bi bi-instagram" style="padding-left: 8px; font-size:24px"></i>
+                        </div>
+                        <!-- Texto de copyright -->
+                        <p style="padding-right:290px; color:rgb(88, 92, 92); padding-bottom:10px">© 2024 Deliveroo</p>
                     </nav>
                 </div>
             </footer>   
