@@ -26,7 +26,7 @@
                 <?php if (isset($_GET['nombreMal'])) {echo "<div class='error-message'>El formato del nombre es incorrecto.</div>"; } ?>
 
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" value="<?php if(isset($_GET["nombre"])) {echo $_GET["nombre"];} ?>">
+                <input type="text" name="nombre" placeholder="ex. Julia" id="nombre" value="<?php if(isset($_GET["nombre"])) {echo $_GET["nombre"];} ?>">
 
                 <p id="errorNombre" class="mensaje-error"></p>
 
@@ -36,7 +36,7 @@
                 <?php if (isset($_GET['apellidoMal'])) {echo "<div class='error-message'>Formato incorrecto de apellido. Solo puede contener letras y números.</div>"; } ?>
 
                 <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" id="apellido" placeholder="" value="<?php if(isset($_GET['apellido'])) {echo $_GET['apellido'];} ?>">
+                <input type="text" name="apellido" id="apellido" placeholder="ex. Suarez" value="<?php if(isset($_GET['apellido'])) {echo $_GET['apellido'];} ?>">
                 
                 <p id="errorApellido" class="mensaje-error"></p>
 
@@ -46,7 +46,7 @@
                 <?php if (isset($_GET['telefonoMal'])) {echo "<div class='error-message'>Formato incorrecto de telefono. Solo puede contener letras y números.</div>"; } ?>
 
                 <label for="telefono">Numero de telefono</label>
-                <input type="text" name="telefono" id="telefono" placeholder="" value="<?php if(isset($_GET['telefono'])) {echo $_GET['telefono'];} ?>">
+                <input type="text" name="telefono" id="telefono" placeholder="ex. 673645392" value="<?php if(isset($_GET['telefono'])) {echo $_GET['telefono'];} ?>">
 
                 <!-- mensaje error si esta vacio -->
                 <p id="errorVacioTelefono" class="mensaje-error"></p>
@@ -61,7 +61,7 @@
                 <?php if (isset($_GET['emailExistente'])) {echo "<div class='error-message'>El email ya existe.</div>"; } ?>
 
                 <label for="email">Email</label>
-                <input type="text" name="email" id="email" value="<?php if(isset($_GET["email"])) {echo $_GET["email"];} ?>">
+                <input type="text" name="email" id="email" placeholder="julia@gmail.com" value="<?php if(isset($_GET["email"])) {echo $_GET["email"];} ?>">
 
                 <!-- mensaje error si el esta vacio -->
                 <p id="errorVacioMail" class="mensaje-error"></p>
@@ -74,21 +74,27 @@
                 <?php if (isset($_GET['password1Mal'])) {echo "<div class='error-message'>El formato de la contraseña es incorrecto.</div>"; } ?>
 
                 <label for="password1">Contraseña</label>
-                <input type="password" name="password1" id="password1" value="<?php if(isset($_GET["password1"])) {echo $_GET["password1"];} ?>">
-                <p id="password1" class="mensaje-error"></p>
+                <input type="password" name="password1" id="password1" placeholder="Constraseña" value="<?php if(isset($_GET["password1"])) {echo $_GET["password1"];} ?>">
+                <p id="password1mal" class="mensaje-error"></p>
 
                 <!-- Contraseña2 -->
                 <label for="password2">Contraseña2</label>
                 <input type="password" name="password2" id="password2" value="<?php if(isset($_GET["password2"])) {echo $_GET["password2"];} ?>">
                 <p id="password2mal" class="mensaje-error"></p>
+                <br>
+                <br>
 
+                <span class="password-criteria-messaging">Try to create a password that's not easy to guess. It must be at least 8 characters long.</span>
+                <br>
+                <span class="password-criteria-messaging">By continuing you agree to our <a href="/legal" target="_blank">T&amp;Cs</a>. Please also check out our <a href="/privacy" target="_blank">Privacy Policy</a>. We use your data to offer you a personalised experience and to better understand and improve our services. <a href="/privacy#use-of-your-information">For more information see here</a>.</span>
 
+                <span class="container-btn">
+                    <button type="button" class="btn-azul" tabindex="0">
+                        <span class="ccl-bc70252bc472695a">Create account</span>
+                    </button>
+                </span>
 
-                <br/><br>
-
-                <input type="submit" name="enviar" value="Enviar" style="width: 100%;">
-
-                <p style="text-align: center;">Ya tienes una cuenta? Inicia sesion <a href=" ./singup.php" style="color:#fe76c1">aqui</a></p>
+                <p style="text-align: center; width: 100%;">Ya tienes una cuenta? Inicia sesion <a href=" ./singup.php" >aqui</a></p>
             </form>
         </div>
     </div>

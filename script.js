@@ -36,12 +36,34 @@ function validacionMail() {
     }
 }
 
-// function ValidacionContrasena{
-//     var inputpass1 = document.getElementById('password1');
-//     var contrasena1 = document.getElementById('password1').value;
-//     var contrasena1mal = document.getElementById('password1mal');
+function ValidacionContrasena() {
+    var contrasena1 = document.getElementById('password1').value;
+    var contrasena1mal = document.getElementById('password1mal');
+    var inputpass1 = document.getElementById('password1');
 
-// }
+
+    if (contrasena1 == null || contrasena1 === "") {
+        inputpass1.style.borderColor = 'red';
+        // Si el campo está vacío, se muestra un mensaje de error de campo obligatorio.
+        contrasena1mal.innerHTML = "El campo Contraseña es obligatorio.";
+        return false;
+    } else {
+        // Expresión regular para validar la contraseña
+        var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+        if (!regex.test(contrasena1)) {
+            inputpass1.style.borderColor = 'red';
+            // Si la contraseña no cumple con los requisitos, mostrar un mensaje de error
+            contrasena1mal.innerHTML = "La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas y al menos un carácter especial.";
+            return false; // Retorna falso indicando que la contraseña no es válida
+        } else {
+            inputpass1.style.borderColor = '#e8ebeb';
+            contrasena1mal.innerHTML = ""; // Borrar el mensaje de error si la contraseña es válida
+            return true; // Retorna verdadero indicando que la contraseña es válida
+        }
+    }
+}
+
 
 function contrasena() {
     var inputpass2 = document.getElementById('password2');
@@ -142,7 +164,7 @@ function validacionTelefono() {
         // Si el campo no cumple con el formato de número de teléfono, se muestra un mensaje de error.
         inputTelefono.style.borderColor = 'red';
         errorVacioTelefono.textContent = "";
-        errorMalTelefono.textContent = "Pon un numero de telefono valido.";
+        errorMalTelefono.textContent = "Introduce un numero de telefono valido.";
         return false;
     } else {
         // Si el campo contiene un número de teléfono válido, se limpian los mensajes de error.
