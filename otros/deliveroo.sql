@@ -72,13 +72,13 @@ INSERT INTO `tipo_comida` (`id_tipo`, `nombre_tipo`) VALUES
 --
 
 CREATE TABLE `usuarios` (
-  `id_usu` bigint(20) UNSIGNED NOT NULL,
-  `nombre_usu` varchar(255) NOT NULL,
-  `apellidos_usu` varchar(255) NOT NULL,
-  `email_usu` varchar(255) NOT NULL,
-  `tipo_usu` enum('Admin','Gerente','Estandar','Repartidor') NOT NULL,
-  `pwd_usu` varchar(255) NOT NULL,
-  `telf_usu` varchar(255) DEFAULT NULL
+  `id_user` bigint(20) UNSIGNED NOT NULL,
+  `nombre_user` varchar(255) NOT NULL,
+  `apellidos_user` varchar(255) NOT NULL,
+  `email_user` varchar(255) NOT NULL,
+  `tipo_user` enum('Admin','Gerente','Estandar','Repartidor') NOT NULL,
+  `pwd_user` varchar(255) NOT NULL,
+  `telf_user` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
