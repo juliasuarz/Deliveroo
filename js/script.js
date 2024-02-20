@@ -5,7 +5,7 @@ function ListarRestaurantes() {
 
     var ajax = new XMLHttpRequest();
 
-    ajax.open('POST', 'proc/filtro-restaurante.php');
+    ajax.open('POST', 'proc/filtro-restaurantes.php');
 
     ajax.onload = function () {
         var str = "";
@@ -14,13 +14,24 @@ function ListarRestaurantes() {
             var json = JSON.parse(ajax.responseText);
             var grid = '';
 
-            str = '<div>';
+            str = '<div class="container">';
+            str += '<div class = "row"';
 
             json.forEach(function (item) { 
-                
+                str += '<div>';
+                str += '<p>'+ item.nombre_rest +'</p>'
+                str += '</div>';
             });
+            str += '</div>';
+            str += '</div>';
+            grid = str;
+            resultados.innerHTML = grid;
+
         } else {
-            resultados.innerText = 'Error';
+            resultados.innerHTML = 'Error';
         }
     }
-} 
+    ajax.send(formdata);
+}
+
+ListarRestaurantes();

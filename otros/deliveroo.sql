@@ -52,7 +52,8 @@ INSERT INTO `restaurantes_tipo` (`id_rest_tipo`, `id_rest_rest_tipo`, `id_tipo_r
 
 CREATE TABLE `tipo_comida` (
   `id_tipo` bigint(20) UNSIGNED NOT NULL,
-  `nombre_tipo` varchar(255) NOT NULL
+  `nombre_tipo` varchar(255) NOT NULL,
+  `img_tipo` varchar(255) NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -76,6 +77,7 @@ CREATE TABLE `usuarios` (
   `nombre_usu` varchar(255) NOT NULL,
   `apellidos_usu` varchar(255) NOT NULL,
   `email_usu` varchar(255) NOT NULL,
+  `img_usu` varchar(255) NULL,
   `tipo_usu` enum('Admin','Gerente','Estandar','Repartidor') NOT NULL,
   `pwd_usu` varchar(255) NOT NULL,
   `telf_usu` varchar(255) DEFAULT NULL
@@ -98,6 +100,9 @@ INSERT INTO `usuarios` (`id_usu`, `nombre_usu`, `apellidos_usu`, `email_usu`, `t
 CREATE TABLE `valoracion` (
   `id_val` bigint(20) UNSIGNED NOT NULL,
   `num_val` int(11) NOT NULL,
+  `titulo_val` varchar(255) NULL,
+  `descripcion_val` varchar(255) NULL,
+  `hora_val` DATETIME NOT NULL,
   `id_rest_val` bigint(20) UNSIGNED DEFAULT NULL,
   `id_usu_val` bigint(20) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -118,6 +123,7 @@ INSERT INTO `valoracion` (`id_val`, `num_val`, `id_rest_val`, `id_usu_val`) VALU
 CREATE TABLE `platos` (
   `id_plato` bigint(20) UNSIGNED NOT NULL,
   `nombre_plato` varchar(40) NOT NULL,
+  `precio_plato` decimal(3,2) NOT NULL,
   `img_plato` varchar(40) NOT NULL,
   `id_tipo_plato` bigint(20) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;	
