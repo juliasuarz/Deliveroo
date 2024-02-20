@@ -77,7 +77,6 @@ CREATE TABLE `usuarios` (
   `nombre_usu` varchar(255) NOT NULL,
   `apellidos_usu` varchar(255) NOT NULL,
   `email_usu` varchar(255) NOT NULL,
-  `img_usu` varchar(255) NULL,
   `tipo_usu` enum('Admin','Gerente','Estandar','Repartidor') NOT NULL,
   `pwd_usu` varchar(255) NOT NULL,
   `telf_usu` varchar(255) DEFAULT NULL
