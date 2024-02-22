@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
+    <title>Singup</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -18,7 +18,7 @@
     <h1>Crea una cuenta</h1><br>
     <div class="form-container">
         <div>
-            <form action="validacion_login.php" method="post">
+            <form action="validacion_singup.php" id="formularioRegistro" method="post">
                 
                 <!-- Nombre -->
                 <?php if (isset($_GET['nombreVacio'])) {echo "<div class='error-message'>Nombre vacío. Has de introducir un nombre válido.</div>"; } ?>
@@ -54,11 +54,11 @@
                 <p id="errorMalTelefono" class="mensaje-error"></p>
 
                 <!-- Email -->
-                <?php if (isset($_GET['emailVacio'])) {echo "<div class='error-message'>Email vacío. Has de introducir un email válido.</div>"; } ?>
+                <?php if (isset($_GET['correoVacio'])) {echo "<div class='error-message'>Email vacío. Has de introducir un email válido.</div>"; } ?>
 
-                <?php if (isset($_GET['emailMal'])) {echo "<div class='error-message'>El formato del email es incorrecto</div>"; } ?>
+                <?php if (isset($_GET['correoMal'])) {echo "<div class='error-message'>El formato del email es incorrecto</div>"; } ?>
 
-                <?php if (isset($_GET['emailExistente'])) {echo "<div class='error-message'>El email ya existe.</div>"; } ?>
+                <?php if (isset($_GET['correoExistente'])) {echo "<div class='error-message'>El email ya existe.</div>"; } ?>
 
                 <label for="email">Email</label>
                 <input type="text" name="email" id="email" placeholder="julia@gmail.com" value="<?php if(isset($_GET["email"])) {echo $_GET["email"];} ?>">
@@ -69,9 +69,9 @@
                 <p id="errorMalMail" class="mensaje-error"></p>
 
                 <!-- Contraseña -->
-                <?php if (isset($_GET['password1Vacio'])) {echo "<div class='error-message'>Contraseña vacía. Has de introducir una contraseña válida.</div>"; } ?>
+                <?php if (isset($_GET['contrasenaVacio'])) {echo "<div class='error-message'>Contraseña vacía. Has de introducir una contraseña válida.</div>"; } ?>
 
-                <?php if (isset($_GET['password1Mal'])) {echo "<div class='error-message'>El formato de la contraseña es incorrecto.</div>"; } ?>
+                <?php if (isset($_GET['contrasenaMal'])) {echo "<div class='error-message'>El formato de la contraseña es incorrecto.</div>"; } ?>
 
                 <label for="password1">Contraseña</label>
                 <input type="password" name="password1" id="password1" placeholder="Constraseña" value="<?php if(isset($_GET["password1"])) {echo $_GET["password1"];} ?>">
@@ -89,8 +89,8 @@
                 <span class="password-criteria-messaging">By continuing you agree to our <a href="/legal" target="_blank">T&amp;Cs</a>. Please also check out our <a href="/privacy" target="_blank">Privacy Policy</a>. We use your data to offer you a personalised experience and to better understand and improve our services. <a href="/privacy#use-of-your-information">For more information see here</a>.</span>
 
                 <span class="container-btn">
-                    <button type="button" class="btn-azul" tabindex="0">
-                        <span class="ccl-bc70252bc472695a">Create account</span>
+                    <button type="button" class="btn-azul" tabindex="0" id="btnRegistro">
+                        <span>Create account</span>
                     </button>
                 </span>
 
@@ -100,4 +100,4 @@
     </div>
 </div>
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

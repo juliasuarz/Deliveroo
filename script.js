@@ -1,12 +1,46 @@
-/////////////////////////FORMULARIO LOGIN/////////////////////////////
+/////////////////////////FORMULARIO LOGIN Y SINGUP/////////////////////////////
 
 //Recoger datos formulario Login
-document.getElementById('email').onblur = validacionMail;
-document.getElementById('password2').onblur = contrasena;
-document.getElementById('password1').onblur = ValidacionContrasena;
-document.getElementById('nombre').onblur = validacionNombre;
-document.getElementById('apellido').onblur = validacionApellido;
-document.getElementById('telefono').onblur = validacionTelefono;
+var emailElement = document.getElementById('email');
+if (emailElement) {
+    emailElement.onblur = validacionMail;
+}
+
+var password1Element = document.getElementById('password1');
+if (password1Element) {
+    password1Element.onblur = ValidacionContrasena;
+}
+
+var password2Element = document.getElementById('password2');
+if (password2Element) {
+    password2Element.onblur = contrasena;
+}
+
+var password3Element = document.getElementById('password3');
+if (password3Element) {
+    password3Element.onblur = ValidacionContrasena2;
+}
+
+var nombreElement = document.getElementById('nombre');
+if (nombreElement) {
+    nombreElement.onblur = validacionNombre;
+}
+
+var apellidoElement = document.getElementById('apellido');
+if (apellidoElement) {
+    apellidoElement.onblur = validacionApellido;
+}
+
+var telefonoElement = document.getElementById('telefono');
+if (telefonoElement) {
+    telefonoElement.onblur = validacionTelefono;
+}
+
+// Obtener el botón de envío del formulario y agregar un evento de clic para llamar a la función de validación
+var formRegistro = document.getElementById('btnRegistro');
+if (formRegistro) {
+    formRegistro.onclick = validarYRedirigir;
+}
 
 // Función para validar el campo de correo electrónico
 function validacionMail() {
@@ -64,6 +98,24 @@ function ValidacionContrasena() {
     }
 }
 
+function ValidacionContrasena2() {
+    var contrasena3 = document.getElementById('password3').value;
+    var contrasena3mal = document.getElementById('password3mal');
+    var inputpass3 = document.getElementById('password3');
+
+
+    if (contrasena3 == null || contrasena3 === "") {
+        inputpass3.style.borderColor = 'red';
+        // Si el campo está vacío, se muestra un mensaje de error de campo obligatorio.
+        contrasena3mal.innerHTML = "El campo Contraseña es obligatorio.";
+        return false;
+    } else {
+        inputpass3.style.borderColor = '#e8ebeb';
+        contrasena3mal.innerHTML = ""; // Borrar el mensaje de error si la contraseña es válida
+        return true; // Retorna verdadero indicando que la contraseña es válida
+    }
+}
+
 
 function contrasena() {
     var inputpass2 = document.getElementById('password2');
@@ -73,25 +125,25 @@ function contrasena() {
     var contrasena2 = document.getElementById('password2').value;
     var contrasena2mal = document.getElementById('password2mal');
 
-    console.log(contrasena1);
-    console.log(contrasena2);
 
-
-    if (contrasena1 === contrasena2) {
-        inputpass2.style.borderColor = '#e8ebeb';
-        inputpass1.style.borderColor = '#e8ebeb';
-        contrasena2mal.textContent = "";
-        return true;
-        
-    } else{
-        // Si el campo contiene un correo electrónico válido, se limpian los mensajes de error.
+    if (contrasena1.trim() !== "" && contrasena2.trim() !== "") {
+        if (contrasena1 === contrasena2) {
+            inputpass2.style.borderColor = '#e8ebeb';
+            inputpass1.style.borderColor = '#e8ebeb';
+            contrasena2mal.textContent = "";
+            return true;
+        } else {
+            inputpass2.style.borderColor = 'red';
+            inputpass1.style.borderColor = 'red';
+            contrasena2mal.textContent = "No coinciden";
+            return false;
+        }
+    } else {
+        // Si alguno de los campos de contraseña está vacío, muestra un mensaje de error.
         inputpass2.style.borderColor = 'red';
         inputpass1.style.borderColor = 'red';
-        contrasena2mal.textContent = "No coinciden";
+        contrasena2mal.textContent = "Por favor, complete ambos campos de contraseña.";
         return false;
-
-        
-        
     }
 }
 
@@ -172,5 +224,34 @@ function validacionTelefono() {
         errorMalTelefono.textContent = "";
         errorVacioTelefono.textContent = ""
         return true;
+    }
+}
+
+// Función para validar el formulario y redirigir si es válido
+function validarYRedirigir(event) {
+    // Detener el envío del formulario para validar primero
+    event.preventDefault();
+
+    // Realizar validaciones aquí
+    var nombreValido = validacionNombre();
+    var apellidoValido = validacionApellido();
+    var telefonoValido = validacionTelefono();
+    var emailValido = validacionMail();
+    var contrasenaValida = ValidacionContrasena();
+    var contrasenasCoinciden = contrasena();
+
+    // Verificar si todas las validaciones son verdaderas
+    if (nombreValido && apellidoValido && telefonoValido && emailValido && contrasenaValida && contrasenasCoinciden) {
+        // Si todas las validaciones son verdaderas, enviar el formulario
+        document.getElementById('formularioRegistro').submit();
+    } else {
+        // Si alguna validación falla, mostrar un SweetAlert con un mensaje de error
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor, completa todos los campos correctamente.',
+            showConfirmButton: false,
+            timer: 2000
+        });
     }
 }
