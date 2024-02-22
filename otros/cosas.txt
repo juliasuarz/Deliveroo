@@ -1,0 +1,7 @@
+ - BBDD
+    -- Quitar restaurante platos
+    -- Quitar restaurante tipo
+
+- Filtro
+    -- Filtrar por valoración
+    -- Filtrar por precio medio

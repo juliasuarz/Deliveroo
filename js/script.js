@@ -22,6 +22,9 @@ function FiltrosRestaurantes() {
                 str += '<button class="btn btn-success" onclick="ListarRestaurantes(\'' + item.id_tipo + '\')">'+ item.nombre_tipo +'</button>'
                 str += '</div>';
             });
+            str += '<div>';
+            str += '<button class="btn btn-success" onclick="ListarRestaurantes(`%`)">Limpiar Filtro</button>'
+            str += '</div>';
             str += '</div>';
             str += '</div>';
             grid = str;

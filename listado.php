@@ -11,6 +11,10 @@
 
     </div>
 
+    <div id="filtro-activo">
+        
+    </div>
+
     <div id="resultados">
 
     </div>
