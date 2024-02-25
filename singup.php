@@ -10,9 +10,33 @@
     <link href="style.less" rel="stylesheet">
 </head>
 <body>
-    
-</body>
-</html>
+    <?php
+    session_start();
+
+    // Verificar si hay un indicador de correo electrónico existente en la sesión
+    if (isset($_SESSION['email_exists']) && $_SESSION['email_exists']) {
+        unset($_SESSION['email_exists']); // Limpiar el indicador de la sesión
+
+        // Mostrar SweetAlert
+        ?>
+        <script>
+        Swal.fire("Error", "El correo electrónico ya está en uso.", "error");
+        </script>
+        <?php
+    }
+
+    // Verificar si hay un indicador de teléfono existente en la sesión
+    if (isset($_SESSION['telefono_exists']) && $_SESSION['telefono_exists']) {
+        unset($_SESSION['telefono_exists']); // Limpiar el indicador de la sesión
+
+        // Mostrar SweetAlert
+        ?>
+        <script>
+        Swal.fire("Error", "El teléfono ya está en uso.", "error");
+        </script>
+        <?php
+    }
+    ?>
 
 <div class="container-formulario">
     <h1>Crea una cuenta</h1><br>
@@ -100,4 +124,3 @@
     </div>
 </div>
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
