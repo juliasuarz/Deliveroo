@@ -18,7 +18,7 @@
     		<div class="card-body">
     			<div class="row">
     				<div class="col-sm-4 text-center">
-    					<h1 class="text-warning mt-4 mb-4">
+    					<h1 class="verde mt-4 mb-4">
     						<b><span id="average_rating">0.0</span> / 5</b>
     					</h1>
     					<div class="mb-3">
@@ -32,49 +32,49 @@
     				</div>
     				<div class="col-sm-4">
     					<p>
-                            <div class="progress-label-left"><b>5</b> <i class="fas fa-star text-warning"></i></div>
+                            <div class="progress-label-left"><b>5</b> <i class="fas fa-star verde"></i></div>
 
                             <div class="progress-label-right">(<span id="total_five_star_review">0</span>)</div>
                             <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="five_star_progress"></div>
+                                <div class="progress-bar fondo-verde" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="five_star_progress"></div>
                             </div>
                         </p>
     					<p>
-                            <div class="progress-label-left"><b>4</b> <i class="fas fa-star text-warning"></i></div>
+                            <div class="progress-label-left"><b>4</b> <i class="fas fa-star verde"></i></div>
                             
                             <div class="progress-label-right">(<span id="total_four_star_review">0</span>)</div>
                             <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="four_star_progress"></div>
+                                <div class="progress-bar fondo-verde" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="four_star_progress"></div>
                             </div>               
                         </p>
     					<p>
-                            <div class="progress-label-left"><b>3</b> <i class="fas fa-star text-warning"></i></div>
+                            <div class="progress-label-left"><b>3</b> <i class="fas fa-star verde"></i></div>
                             
                             <div class="progress-label-right">(<span id="total_three_star_review">0</span>)</div>
                             <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="three_star_progress"></div>
+                                <div class="progress-bar fondo-verde" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="three_star_progress"></div>
                             </div>               
                         </p>
     					<p>
-                            <div class="progress-label-left"><b>2</b> <i class="fas fa-star text-warning"></i></div>
+                            <div class="progress-label-left"><b>2</b> <i class="fas fa-star verde"></i></div>
                             
                             <div class="progress-label-right">(<span id="total_two_star_review">0</span>)</div>
                             <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="two_star_progress"></div>
+                                <div class="progress-bar fondo-verde" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="two_star_progress"></div>
                             </div>               
                         </p>
     					<p>
-                            <div class="progress-label-left"><b>1</b> <i class="fas fa-star text-warning"></i></div>
+                            <div class="progress-label-left"><b>1</b> <i class="fas fa-star verde"></i></div>
                             
                             <div class="progress-label-right">(<span id="total_one_star_review">0</span>)</div>
                             <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="one_star_progress"></div>
+                                <div class="progress-bar fondo-verde" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="one_star_progress"></div>
                             </div>               
                         </p>
     				</div>
     				<div class="col-sm-4 text-center">
     					<h3 class="mt-4 mb-3">Pon tu Reseña Aquí</h3>
-    					<button type="button" name="add_review" id="add_review" class="btn btn-primary">Reseña</button>
+    					<button type="button" name="add_review" id="add_review" class="btn fondo-turquesa text-white">Reseña</button>
     				</div>
     			</div>
     		</div>
@@ -89,7 +89,7 @@
     	<div class="modal-content">
 	      	<div class="modal-header">
 	        	<h5 class="modal-title">Realizar Reseña</h5>
-	        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        	<button type="button" class="close turquesa" data-dismiss="modal" aria-label="Close">
 	          		<span aria-hidden="true">&times;</span>
 	        	</button>
 	      	</div>
@@ -108,7 +108,7 @@
 	        		<textarea name="user_review" id="user_review" class="form-control" placeholder="Escribe tu reseña aquí..."></textarea>
 	        	</div>
 	        	<div class="form-group text-center mt-4">
-	        		<button type="button" class="btn btn-primary" id="save_review">Enviar</button>
+	        		<button type="button" class="btn fondo-turquesa text-white" id="save_review">Enviar</button>
 	        	</div>
 	      	</div>
     	</div>
@@ -131,6 +131,23 @@
     .star-light{
         color: #e9ecef;
     }
+
+    .verde{
+        color: rgb(77, 124, 27);
+    }
+
+    .turquesa{
+        color: rgb(0, 204, 188);
+    }
+
+    .fondo-turquesa{
+        background-color: rgb(0, 204, 188);
+        /* background-color: rgb(0, 194, 179); */
+    }
+
+    .fondo-verde{
+        background-color: rgb(77, 124, 27);
+    }
 </style>
 
 <script>
@@ -151,7 +168,7 @@
 
             for(var count = 1; count <= rating; count++){
 
-                $('#submit_star_'+count).addClass('text-warning');
+                $('#submit_star_'+count).addClass('verde');
 
             }
 
@@ -162,7 +179,7 @@
 
                 $('#submit_star_'+count).addClass('star-light');
 
-                $('#submit_star_'+count).removeClass('text-warning');
+                $('#submit_star_'+count).removeClass('verde');
 
             }
         }
@@ -175,7 +192,7 @@
 
                 $('#submit_star_'+count).removeClass('star-light');
 
-                $('#submit_star_'+count).addClass('text-warning');
+                $('#submit_star_'+count).addClass('verde');
             }
 
         });
@@ -227,7 +244,7 @@
                     $('.main_star').each(function(){
                         count_star++;
                         if(Math.ceil(data.average_rating) >= count_star){
-                            $(this).addClass('text-warning');
+                            $(this).addClass('verde');
                             $(this).addClass('star-light');
                         }
                     });
@@ -249,7 +266,7 @@
 
                         for(var count = 0; count < data.review_data.length; count++){
                             html += '<div class="row mb-3">';
-                            html += '<div class ="col-sm-1"><div class="rounded-circle bg-danger text-white pt-2 pb-2"><h3 class="text-center">'+data.review_data[count].user_name.charAt(0)+'</h3></div></div>';
+                            html += '<div class ="col-sm-1"><div class="rounded-circle fondo-turquesa text-white pt-2 pb-2"><h3 class="text-center">'+data.review_data[count].user_name.charAt(0)+'</h3></div></div>';
                             html += '<div class="col-sm-11">';
                             html += '<div class="card">';
                             html += '<div class="card-header"><b>'+data.review_data[count].user_name+'</b></div>';
@@ -258,7 +275,7 @@
                                 var class_name = '';
 
                                 if(data.review_data[count].rating >= star){
-                                    class_name = 'text-warning';
+                                    class_name = 'verde';
                                 } else {
                                     class_name = 'star-light';
                                 }
@@ -279,6 +296,22 @@
                 }
             })
         }
+
+        $('.fondo-turquesa').mouseenter(function(){
+            $(this).css('background-color', 'rgb(0, 194, 179)');
+        });
+
+        $('.fondo-turquesa').mouseleave(function(){
+            $(this).css('background-color', 'rgb(0, 204, 188)');
+        });
+
+        $('.turquesa').mouseenter(function(){
+            $(this).css('color', 'rgb(0, 194, 179)');
+        });
+
+        $('.turquesa').mouseleave(function(){
+            $(this).css('color', 'rgb(0, 204, 188)');
+        });
 
     });
 </script>
