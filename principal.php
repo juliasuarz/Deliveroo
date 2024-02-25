@@ -142,6 +142,82 @@
     </div>
 </div>
 
+<div class="region-mapa">
+    <div class="container-trackorders">
+        <div class="track-order">
+            <h2>
+                Track orders to your door
+            </h2>
+            <p>Get your favourite food delivered in a flash. You’ll see when your rider’s picked up your order, and be able to follow them along the way. You’ll get a notification when they’re nearby, too.</p>
+            <img src="img/iconos.svg" alt="">
+        </div>
+
+        <div class="imagenes-track">
+            <img src="img/mapa.png" alt="" class="img-mapa">
+            <img src="img/notification.webp" alt="" class="img-noti">
+        </div>
+
+    </div>
+
+</div>
+
+<div class="region-mealdeals">
+    <div class="container-mealdeals">
+        <div class="title-meal">
+            <img src="img/strellas-izquierda.svg" alt="">
+            <h2>Up to 25% off - Meal Deals</h2>
+            <img src="img/strellas_derecha.svg" alt="">
+        </div>
+        <p class="text-1">Need a midweek pick-me-up, a break from cooking for the family or just fancy your favourite restaurant?</p>
+        <p class="text-2">Service and delivery fees, subject to availability. Participating restaurants only. T&amp;Cs apply.<!-- -->&nbsp;<a href="/terms" class="MerchBlock-ce9e7ed87511fd8f">Terms.</a></p>
+        <div class="img-footer">
+            <img src="img/footer-deals.svg" alt="">
+        </div>
+    </div>
+
+</div>
+
+<div class="region-cards">
+    <div class="container-cards">
+        <div class="card" style="background-image: url('img/card-restaurante.png');">
+            <div class="container-text">
+                <div class="text-cards">
+                    <h2>Partner with us</h2>
+                    <p>Join Deliveroo and reach more customers than ever. We handle delivery, so you can focus on the food.</p>
+                    <a>Get started</a>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('img/card-rider.png');">
+            <div class="container-text">
+                <div class="text-cards">
+                    <h2>Partner with us</h2>
+                    <p>Join Deliveroo and reach more customers than ever. We handle delivery, so you can focus on the food.</p>
+                    <a>Get started</a>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('img/card-yogur.png');">
+            <div class="container-text">
+                <div class="text-cards">
+                    <h2>Partner with us</h2>
+                    <p>Join Deliveroo and reach more customers than ever. We handle delivery, so you can focus on the food.</p>
+                    <a>Get started</a>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('img/card-giftcardhero.png');">
+            <div class="container-text">
+                <div class="text-cards">
+                    <h2>Partner with us</h2>
+                    <p>Join Deliveroo and reach more customers than ever. We handle delivery, so you can focus on the food.</p>
+                    <a>Get started</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 
 <script src="owlcarousel/jquery.min.js"></script>
