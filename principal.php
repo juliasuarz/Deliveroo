@@ -12,22 +12,25 @@
 </head>
 
 <body>
-    <div class ="menu">
+    <div class ="menu menu-negro" >
         <div class="navbar navbar-expand-lg ">
             <div class="navbar">
                 <div class="container-fluid menu-p">
                     <div class="col col-logo">
                         <img class="logo-img" src="./img/deliveroo-logo.png" id="inicio">
                     </div>
-                    <div>
+                    <!-- <div>
                         <input class="buscador-inicio" placeholder="Search Carbon - Soho">
-                    </div>
-                    <div class="btn-menu">
-                        <div>
-                            <button class="opt">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                                <span id="precio-cesta">0.00 €</span>
-                            </button>
+                    </div> -->
+                    <div class="btn-menu navbar-right nav navbar-nav navbar-right">
+                        <div class="dropdown">
+                            <button class=" opt btn-secondary " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Partner with us</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Riders</a>
+                                <a class="dropdown-item" href="#">Partners</a>
+                                <a class="dropdown-item" href="#">Careers</a>
+                                <a class="dropdown-item" href="#">Deliveroo for Work</a>
+                            </div>
                         </div>
                         <div>
                             <button class="opt">
@@ -63,32 +66,83 @@
             <p><a href="/login?redirect=/" class="ccl-1a33e022806c6849">Log in</a> for your recent addresses.</p>    
         </div>
 </div>
-<div class="region-carrousell">
-    <div class="container p-5">
 
+<div class="region-carrousell">
+    <div class="container p-5 container-carrousell">
         <div class="owl-carousel">
 
-            <div> <img src="img/burger.webp" alt=""> </div>
+            <div> <img src="img/carrousel/icon-donut.png" alt="" class="img-peq"> </div>
 
-            <div> <img src="img/burger.webp" alt=""> </div>
+            <div> <img src="img/carrousel/wagamama.png" alt="" class="img-peq"> </div>
 
-            <div> <img src="img/burger.webp" alt=""> </div>
+            <div> <img src="img/carrousel/fiveguys.png" alt="" class="img-peq"> </div>
 
-            <div> <img src="img/burger.webp" alt=""> </div>
+            <div> <img src="img/carrousel/chicken-wide.png" alt="" class="img-gran"> </div>
 
-            <div> <img src="img/burger.webp" alt=""> </div>
+            <div> <img src="img/carrousel/pizza-wide.png" alt="" class="img-gran"> </div>
 
-            <div> <img src="img/burger.webp" alt=""> </div>
+            <div> <img src="img/carrousel/icon-vegan.png" alt="" class="img-peq"> </div>
 
-            <div> <img src="img/burger.webp" alt=""> </div>
+            <div> <img src="img/carrousel/hop.png" alt="" class="img-peq"> </div>
 
-            <div> <img src="img/burger.webp" alt=""> </div>
+            <div> <img src="img/carrousel/bowl-wide.png" alt="" class="img-gran"> </div>
 
+            <div> <img src="img/carrousel/thai-wide.png" alt="" class="img-gran"> </div>
+
+            <div> <img src="img/carrousel/icon-pizza.png" alt="" class="img-peq"> </div>
+
+            <div> <img src="img/carrousel/waitrose.png" alt="" class="img-peq"> </div>
+
+            <div> <img src="img/carrousel/icon-wine.png" alt="" class="img-peq"> </div>
+
+            <div> <img src="img/carrousel/sushi-wide.png" alt="" class="img-gran"> </div>
+
+            <div> <img src="img/carrousel/curry-wide.png" alt="" class="img-gran"> </div>
+
+            <div> <img src="img/carrousel/nandos.png" alt="" class="img-peq"> </div>
+
+            <div> <img src="img/carrousel/dessert-wide.png" alt="" class="img-gran"> </div>
         </div>
-
     </div>
+    <div class="container p-5 container-carrousell">
+        <div class="owl-carousel">
 
+            <div> <img src="img/carrousel/bowl-wide.png" alt="" class="img-gran"> </div>
+
+            <div> <img src="img/carrousel/thai-wide.png" alt="" class="img-gran"> </div>
+
+            <div> <img src="img/carrousel/icon-pizza.png" alt="" class="img-peq"> </div>
+
+            <div> <img src="img/carrousel/waitrose.png" alt="" class="img-peq"> </div>
+
+            <div> <img src="img/carrousel/icon-wine.png" alt="" class="img-peq"> </div>
+
+            <div> <img src="img/carrousel/sushi-wide.png" alt="" class="img-gran"> </div>
+
+            <div> <img src="img/carrousel/curry-wide.png" alt="" class="img-gran"> </div>
+
+            <div> <img src="img/carrousel/nandos.png" alt="" class="img-peq"> </div>
+
+            <div> <img src="img/carrousel/dessert-wide.png" alt="" class="img-gran"> </div>
+
+            <div> <img src="img/carrousel/icon-donut.png" alt="" class="img-peq"> </div>
+
+            <div> <img src="img/carrousel/wagamama.png" alt="" class="img-peq"> </div>
+
+            <div> <img src="img/carrousel/fiveguys.png" alt="" class="img-peq"> </div>
+
+            <div> <img src="img/carrousel/chicken-wide.png" alt="" class="img-gran"> </div>
+            
+            <div> <img src="img/carrousel/pizza-wide.png" alt="" class="img-gran"> </div>
+
+            <div> <img src="img/carrousel/icon-vegan.png" alt="" class="img-peq"> </div>
+
+            <div> <img src="img/carrousel/hop.png" alt="" class="img-peq"> </div>
+        </div>
+    </div>
 </div>
+
+
 
 <script src="owlcarousel/jquery.min.js"></script>
 <script src="owlcarousel/owl.carousel.js"></script>
@@ -97,51 +151,35 @@
 
 <script>
 
-        $(document).ready(function () {
-
-            $('.owl-carousel').owlCarousel({
-
-                loop: true,
-
-                autoplay: true,
-
-                autoplayTimeout: 1000,
-
-                margin: 20,
-
-                lazyLoad: true,
-
-                nav: true, // if you follow the step no. 5 then only include this
-
-                navText: ["<button class='text-center btn btn-outline-info btn-sm'><</button>", "<button class='text-center btn btn-outline-info btn-sm'>></button>"], // if you follow the step no. 5 then only include this
-
-                autoplayHoverPause: true,
-
-                responsive: {
-
-                    0: {
-
-                        items: 1
-
-                    },
-
-                    600: {
-
-                        items: 2
-
-                    },
-
-                    1000: {
-
-                        items: 3
-
-                    }
-
+    $(window).on('load', function() {
+        $('.owl-carousel').owlCarousel({
+            center: true,
+            items: 3,
+            loop: true,
+            margin: 30,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            slideTransition: 'linear',
+            autoplayTimeout: 6000,
+            autoplaySpeed: 6000,
+            autoplayHoverPause: true,
+            mouseDrag: false, 
+            touchDrag: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
                 }
-
-            });
-
+            }
         });
+    });
+
 
     </script>
 </body>

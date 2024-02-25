@@ -201,8 +201,11 @@ body{
 
 .menu{
     border-bottom:1px solid #e8ebeb;
+    
     .navbar{
         margin-bottom:0px;
+        width: 100%;
+
     }
     .menu-p{
         gap:50px;
@@ -210,6 +213,11 @@ body{
             display:none;
         }
     }
+}
+.menu-negro{
+    background-color: black;
+    border-bottom:1px solid black;
+
 }
 
 .logo-img{
@@ -229,11 +237,13 @@ body{
 .btn-menu{
     display:flex;
     gap:15px;
+    margin-right: 30px;
     .opt{
         border-radius:4px;
         border:1px solid #e8ebeb;
         background: white;
         padding:8px 16px;
+        height: 40px;
         i{
             color: #00ccbc;
         }
@@ -275,6 +285,8 @@ body{
     padding-bottom: 120px;
     background-position: bottom;
     background-repeat: no-repeat;
+    z-index: 0;
+
     h1{
         color: #fff;
         font-size: 40px;
@@ -327,6 +339,34 @@ body{
                 font-size: 16px;
                 font-weight: 800;
 
+            }
+        }
+    }
+}
+
+.region-carrousell{
+    margin-top: -48px;
+    .container-carrousell{
+        margin: 0px;
+        padding: 0px!important;
+        .owl-stage-outer{
+            overflow: unset;
+            .owl-stage{
+                .owl-item{
+                    width: auto!important;
+
+                    img{
+                        height: 120px;
+                        border-radius: 8px;
+
+                    }
+                    .img-peq{
+                        width: 120px;
+                    }
+                    .img-gram{
+                        width: 240px;
+                    }
+                }
             }
         }
     }
