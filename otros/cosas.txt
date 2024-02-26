@@ -1,7 +1,47 @@
- - BBDD
-    -- Quitar restaurante platos
-    -- Quitar restaurante tipo
+- Filtrar por valoracion y precio medio (descuento_rest / tiempo_rest)
+    -Platos
+    -Precio medio (1.00€ - 3.99€ | 4.00€ - 6.99 | 7.00 - 9.99 | 10.00 - 14.99 | 15.00 - 19.99 | 20.00 - 29.99 | +30.00)
+    -Valoracion (1⭐ | 2⭐ | 3⭐ | 4⭐ | 5⭐)
 
-- Filtro
-    -- Filtrar por valoración
-    -- Filtrar por precio medio
+- buscar por nombre
+
+
+-----------
+
+- Hacer el cuerpo
+
+- Hacer el listado de tipos de comida
+
+- Hacer el listado de platos separado por el tipo de comida
+
+- Scrollear clicando en el tipo de comida a su seccion (Que se cambie el select del tipo conforme se scrollea)
+
+
+-----------
+
+- Tener una imagen de placeholder
+
+- Carrusel listado restaurantes ????
+
+- Nombre de restaurante no ocupe mas de 1 linea
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+- Mostrar las estrellas
+
+- Arreglar desplegable js
+
+- Delivery / Pickup ??
+
+- Sacar el js del html
+
+- Cambiar la estrella del filtro por el icono
+
+- Cuando checkeas un boton tiene que salir verde
+
+- Usar solo 1 version de bootstrap
+
+- Meter try catch
+
+- poner laimg placeholder dentro del restaurante tambien

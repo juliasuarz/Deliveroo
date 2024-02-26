@@ -1,83 +1,39 @@
-function FiltrosRestaurantes() {
-    var filtro = document.getElementById('filtro');
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtener los elementos con los IDs "desplegable" y "desplegable1"
+  var desplegable1 = document.getElementById("desplegable1");
+  var desplegable2 = document.getElementById("desplegable2");
+  var desplegable3 = document.getElementById("desplegable3");
 
-    var formdata = new FormData();
+  // Agregar un evento de clic a cada elemento
+  desplegable1.addEventListener("click", function() {
+    // Toggle de la clase "in"
+    this.classList.toggle("in");
+  });
 
-    var ajax = new XMLHttpRequest();
+  desplegable2.addEventListener("click", function() {
+    // Toggle de la clase "in"
+    this.classList.toggle("in");
+  });
 
-    ajax.open('POST', 'proc/filtro-restaurantes.php');
+  desplegable3.addEventListener("click", function() {
+    // Toggle de la clase "in"
+    this.classList.toggle("in");
+  });
+});
 
-    ajax.onload = function () {
-        var str = "";
+$('.carousel[data-type="multi"] .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
 
-        if (ajax.status == 200) {
-            var json = JSON.parse(ajax.responseText);
-            var grid = '';
-
-            str = '<div class="container">';
-            str += '<div class = "row">';
-
-            json.forEach(function (item) { 
-                str += '<div>';
-                str += '<button class="btn btn-success" onclick="ListarRestaurantes(\'' + item.id_tipo + '\')">'+ item.nombre_tipo +'</button>'
-                str += '</div>';
-            });
-            str += '<div>';
-            str += '<button class="btn btn-success" onclick="ListarRestaurantes(`%`)">Limpiar Filtro</button>'
-            str += '</div>';
-            str += '</div>';
-            str += '</div>';
-            grid = str;
-            filtro.innerHTML = grid;
-
-        } else {
-            filtro.innerHTML = 'Error';
-        }
-    }
-    ajax.send(formdata);
-}
-
-function ListarRestaurantes(tipo) {
-    var resultados = document.getElementById('resultados');
-
-    var formdata = new FormData();
-
-    formdata.append('tipo', tipo);
-
-    var ajax = new XMLHttpRequest();
-
-    ajax.open('POST', 'proc/listado-restaurantes.php');
-
-    ajax.onload = function () {
-        var str = "";
-
-        if (ajax.status == 200) {
-            var json = JSON.parse(ajax.responseText);
-            var grid = '';
-
-            str = '<div class="container">';
-            str += '<div class = "row">';
-
-            json.forEach(function (item) { 
-                str += '<div>';
-                str += '<p>'+ item.nombre_rest +'</p>'
-                str += '</div>';
-            });
-            str += '</div>';
-            str += '</div>';
-            grid = str;
-            resultados.innerHTML = grid;
-
-        } else {
-            resultados.innerHTML = 'Error';
-        }
-    }
-    ajax.send(formdata);
-}
-
-FiltrosRestaurantes();
-ListarRestaurantes("%");
-
-document.addEventListener('DOMContentLoaded', function () {
-
+  for (var i=0;i<4;i++) {
+    next=next.next();
+    if (!next.length) {
+    	next = $(this).siblings(':first');
+  	}
+    
+    next.children(':first-child').clone().appendTo($(this));
+  }
 });
