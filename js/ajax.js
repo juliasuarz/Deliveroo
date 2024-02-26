@@ -40,7 +40,14 @@ function ListarRestaurantes() {
     var restaurantes = document.getElementById('restaurantes');
     var numRestaurantes = document.getElementById('num_restaurantes');
 
+    var precio = document.querySelector('#desplegable1 .form-check-input:checked');
     tipos_comida = document.querySelectorAll('#desplegable2 .form-check-input:checked');
+
+    var precio_selec = "";
+
+    if(precio != null) {
+        precio_selec = precio.value;
+    }
     
     var formdata = new FormData();
 
@@ -51,6 +58,7 @@ function ListarRestaurantes() {
     });
     
     formdata.append('tipo_comida_selec', tipo_comida_selec);
+    formdata.append('precio_selec', precio_selec);
 
     var ajax = new XMLHttpRequest();
 

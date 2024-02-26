@@ -11,21 +11,32 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tipo_comida` (
   `id_tipo` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `nombre_tipo` enum("Americano", "Asiático", "Fusión Asiática", "Desayuno", "Británico", "Almuerzo", "Cafetería", "Caribe", "Chino", "Bebidas", "Tienda de comestibles", "Saludable", "Indio", "Italiano", "Japonés", "Coreano", "Libanés", "Mediterráneo", "Tailandés", "Turco") NOT NULL,
+  `nombre_tipo` varchar(255) NOT NULL,
   `img_tipo` varchar(255) NULL,
   PRIMARY KEY (`id_tipo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Volcado de datos para la tabla `tipo_comida`
---
-
+-- Inserción de datos
 INSERT INTO `tipo_comida` (`nombre_tipo`) VALUES
-('Chino'),
-('Indio'),
-('Saludable'),
-('Italiano'),
 ('Americano'),
+('Asiático'),
+('Fusión Asiática'),
+('Desayuno'),
+('Británico'),
+('Almuerzo'),
+('Cafetería'),
+('Caribe'),
+('Chino'),
+('Bebidas'),
+('Tienda de comestibles'),
+('Saludable'),
+('Indio'),
+('Italiano'),
+('Japonés'),
+('Coreano'),
+('Libanés'),
+('Mediterráneo'),
+('Tailandés'),
 ('Turco');
 
 --

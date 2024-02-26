@@ -72,31 +72,31 @@
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="precio" id="precio1" value="4">
+                        <input class="form-check-input" type="radio" name="precio" id="precio1" value="1,4">
                         <label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="precio1">1.00€ - 3.99€</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="precio" id="precio2" value="7">
+                        <input class="form-check-input" type="radio" name="precio" id="precio2" value="4,7">
                         <label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="precio2">4.00€ - 6.99€</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="precio" id="precio3" value="10">
+                        <input class="form-check-input" type="radio" name="precio" id="precio3" value="7,10">
                         <label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="precio3">7.00€ - 9.99€</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="precio" id="precio4" value="15">
+                        <input class="form-check-input" type="radio" name="precio" id="precio4" value="10,15">
                         <label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="precio4">10.00€ - 14.99€</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="precio" id="precio5" value="20">
+                        <input class="form-check-input" type="radio" name="precio" id="precio5" value="15,20">
                         <label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="precio5">15.00€ - 19.99€</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="precio" id="precio6" value="20">
+                        <input class="form-check-input" type="radio" name="precio" id="precio6" value="20,30">
                         <label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="precio6">20.00€ - 29.99€</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="precio" id="precio7" value="30">
+                        <input class="form-check-input" type="radio" name="precio" id="precio7" value="30,99">
                         <label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="precio7">+30.00€</label>
                     </div>
                 </div>
