@@ -56,14 +56,14 @@
                 <a href="#">Change</a>
             </div>
 
-            <div class="recogida">
+            <!-- <div class="recogida">
                 <fieldset id="recogida">
                     <input type="radio" id="recogida1" name="recogida" value="delivery">
                     <label for="recogida1">Delivery</label><br>
                     <input type="radio" id="recogida2" name="recogida" value="pickup">
                     <label for="recogida2">Pickup</label><br>
                 </fieldset>
-            </div>
+            </div> -->
 
             <div class="filtros filtros-tipo-dieta">
                 <div class="desplegable" id="desplegable1">
@@ -114,23 +114,23 @@
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="valoracion" id="valoracion5" value="5">
+                        <input class="form-check-input" type="radio" name="valoracion" id="valoracion5" value="4.5,5">
                         <label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="valoracion5">5 estrellas</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="valoracion" id="valoracion4" value="4">
+                        <input class="form-check-input" type="radio" name="valoracion" id="valoracion4" value="3.5,4.5">
                         <label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="valoracion4">4 estrellas</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="valoracion" id="valoracion3" value="3">
+                        <input class="form-check-input" type="radio" name="valoracion" id="valoracion3" value="2.5,3.5">
                         <label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="valoracion3">3 estrellas</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="valoracion" id="valoracion2" value="2">
+                        <input class="form-check-input" type="radio" name="valoracion" id="valoracion2" value="1.5,2.5">
                         <label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="valoracion2">2 estrellas</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="valoracion" id="valoracion1" value="1">
+                        <input class="form-check-input" type="radio" name="valoracion" id="valoracion1" value="1,1.5">
                         <label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="valoracion1">1 estrella</label>
                     </div>
                 </div>

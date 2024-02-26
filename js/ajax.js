@@ -1,7 +1,6 @@
-var tipo_comida_selec = [];
 var cantidadRestaurantes = "";
 
-function FiltrosRestaurantes() { // Probablemente Haya que cambiar los id de item.nombre_tipo a algo como tipo_item.nombre_tipo
+function FiltrosRestaurantes() {
     var filtrotipo = document.getElementById('desplegable2');
 
     var formdata = new FormData();
@@ -23,7 +22,7 @@ function FiltrosRestaurantes() { // Probablemente Haya que cambiar los id de ite
 
             json.forEach(function (item) { 
                 str += '<div class="form-check">';
-                str += '<input class="form-check-input" type="checkbox" id="'+ item.nombre_tipo +'" value="'+ item.id_tipo +'">';
+                str += '<input class="form-check-input" type="radio" name="tipo_comida" id="'+ item.nombre_tipo +'" value="'+ item.id_tipo +'">';
                 str += '<label class="form-check-label" onclick="setTimeout(ListarRestaurantes, 100)" for="'+ item.nombre_tipo +'">'+ item.nombre_tipo +'</label>';
                 str += '</div>';
             });
@@ -41,24 +40,30 @@ function ListarRestaurantes() {
     var numRestaurantes = document.getElementById('num_restaurantes');
 
     var precio = document.querySelector('#desplegable1 .form-check-input:checked');
-    tipos_comida = document.querySelectorAll('#desplegable2 .form-check-input:checked');
+    var tipos_comida = document.querySelector('#desplegable2 .form-check-input:checked');
+    var valoracion = document.querySelector('#desplegable3 .form-check-input:checked');
 
     var precio_selec = "";
+    var valoracion_selec = "";
+    tipo_comida_selec = "";
 
     if(precio != null) {
         precio_selec = precio.value;
     }
+
+    if(valoracion != null) {
+        valoracion_selec = valoracion.value;
+    }
+
+    if(tipos_comida != null) {
+        tipo_comida_selec = tipos_comida.value;
+    }
     
     var formdata = new FormData();
 
-    tipo_comida_selec = [];
-
-    tipos_comida.forEach(e => {
-        tipo_comida_selec.push(e.value);
-    });
-    
     formdata.append('tipo_comida_selec', tipo_comida_selec);
     formdata.append('precio_selec', precio_selec);
+    formdata.append('valoracion_selec', valoracion_selec);
 
     var ajax = new XMLHttpRequest();
 

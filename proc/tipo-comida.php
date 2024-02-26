@@ -5,7 +5,7 @@ if(!empty($_POST["restauranteId"])) {
     $id_rest = $_POST["restauranteId"];
 }
 
-$sql = 'SELECT DISTINCT nombre_tipo FROM restaurantes INNER JOIN tipo_comida ON id_rest = id_tipo LEFT JOIN platos ON id_rest = id_rest_plato WHERE id_rest = :id_rest;';
+$sql = 'SELECT DISTINCT nombre_tipo FROM restaurantes INNER JOIN platos ON id_rest = id_rest_plato INNER JOIN tipo_comida ON id_tipo = id_tipo_plato WHERE id_rest = :id_rest;';
 $stmt = $pdo->prepare($sql);
 $stmt->bindParam(':id_rest', $id_rest);
 $stmt->execute();
