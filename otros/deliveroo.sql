@@ -11,7 +11,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tipo_comida` (
   `id_tipo` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `nombre_tipo` varchar(255) NOT NULL,
+  `nombre_tipo` enum("Americano", "Asiático", "Fusión Asiática", "Desayuno", "Británico", "Almuerzo", "Cafetería", "Caribe", "Chino", "Bebidas", "Tienda de comestibles", "Saludable", "Indio", "Italiano", "Japonés", "Coreano", "Libanés", "Mediterráneo", "Tailandés", "Turco") NOT NULL,
+  `img_tipo` varchar(255) NULL,
   PRIMARY KEY (`id_tipo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -20,12 +21,12 @@ CREATE TABLE `tipo_comida` (
 --
 
 INSERT INTO `tipo_comida` (`nombre_tipo`) VALUES
-('China'),
-('India'),
-('Vegana'),
-('Italiana'),
-('Mediterránea'),
-('Japonesa');
+('Chino'),
+('Indio'),
+('Saludable'),
+('Italiano'),
+('Americano'),
+('Turco');
 
 --
 -- Estructura de tabla para la tabla `usuarios`
@@ -37,7 +38,7 @@ CREATE TABLE `usuarios` (
   `apellidos_usu` varchar(255) NOT NULL,
   `img_usu` varchar(255) NULL,
   `email_usu` varchar(255) NOT NULL,
-  `tipo_usu` enum('Admin','Gerente','Estandar','Repartidor') NOT NULL,
+  `tipo_usu` enum('Admin','Gerente','Estandar') NOT NULL,
   `pwd_usu` varchar(255) NOT NULL,
   `telf_usu` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_usu`),
@@ -54,9 +55,9 @@ INSERT INTO `usuarios` (`nombre_usu`, `apellidos_usu`, `email_usu`, `tipo_usu`, 
 ('Julia', 'Suarez', 'jsuarez@gmail.com', 'Gerente', '$2y$10$wigWyJ26umFhiMWROr/DK.NqNltLAI4M2dRT5l4MyPPkoy4YN5rW6', '333333333'),
 ('Daniel', 'Font', 'dfont@gmail.com', 'Estandar', '$2y$10$wigWyJ26umFhiMWROr/DK.NqNltLAI4M2dRT5l4MyPPkoy4YN5rW6', '555555555'),
 ('Ana', 'Martínez López', 'ana.garcia@example.com', 'Estandar', '$2y$10$wigWyJ26umFhiMWROr/DK.NqNltLAI4M2dRT5l4MyPPkoy4YN5rW6', '555123456'),
-('Carlos', 'Fernández Pérez', 'carlos.rodriguez@example.com', 'Repartidor', '$2y$10$wigWyJ26umFhiMWROr/DK.NqNltLAI4M2dRT5l4MyPPkoy4YN5rW6', '123987654'),
+('Carlos', 'Fernández Pérez', 'carlos.rodriguez@example.com', 'Estandar', '$2y$10$wigWyJ26umFhiMWROr/DK.NqNltLAI4M2dRT5l4MyPPkoy4YN5rW6', '123987654'),
 ('Laura', 'Gómez Ruiz', 'laura.sanchez@example.com', 'Estandar', '$2y$10$wigWyJ26umFhiMWROr/DK.NqNltLAI4M2dRT5l4MyPPkoy4YN5rW6', '666987654'),
-('Miguel', 'Hernández González', 'miguel.lopez@example.com', 'Repartidor', '$2y$10$wigWyJ26umFhiMWROr/DK.NqNltLAI4M2dRT5l4MyPPkoy4YN5rW6', '123987654'),
+('Miguel', 'Hernández González', 'miguel.lopez@example.com', 'Estandar', '$2y$10$wigWyJ26umFhiMWROr/DK.NqNltLAI4M2dRT5l4MyPPkoy4YN5rW6', '123987654'),
 ('Sara', 'Jiménez Rodríguez', 'sara.martinez@example.com', 'Estandar', '$2y$10$wigWyJ26umFhiMWROr/DK.NqNltLAI4M2dRT5l4MyPPkoy4YN5rW6', '789123456');
 
 --
@@ -69,6 +70,7 @@ CREATE TABLE `restaurantes` (
   `descripcion_rest` text NOT NULL,
   `tiempo_rest` enum('10','15','20','25','30','+30') NOT NULL,
   `descuento_rest` enum('0','10%','20%','30%','50%') NULL,
+  `gastado_rest` ENUM('5€', '10€', '15€', '20€', '25€', '30€', '35€', '40€', '45€') NULL,
   `precio_envio_rest` decimal(4,2) NULL,
   `img_rest` varchar(255) NOT NULL,
   `id_usu_rest` bigint(20) UNSIGNED DEFAULT NULL,

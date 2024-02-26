@@ -21,12 +21,7 @@
 
 - Tener una imagen de placeholder
 
-- Carrusel listado restaurantes ????
-
-- Nombre de restaurante no ocupe mas de 1 linea
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+- Carrusel listado restaurantes ???? 
 
 - Mostrar las estrellas
 
