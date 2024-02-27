@@ -8,7 +8,7 @@
 <p>
     Nuestra web permite a los usuarios buscar restaurantes según el precio, la valoración de otros usuarios y el tipo de cocina que ofrecen. Además, cada restaurante debe tener al menos una fotografía para dar a los usuarios una idea visual de lo que pueden esperar. También diferenciamos entre dos tipos de usuarios: administradores y usuarios estándar, cada uno con sus propias capacidades y restricciones.
 </p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Deliveroo_Logo.svg/2560px-Deliveroo_Logo.svg.png)](https://www.google.com/url?sa=i&url=https%3A%2F%2Fecomm.design%2Fsite%2Fdeliveroo%2F&psig=AOvVaw2QaoFSOybYCWVSZUqIqGXw&ust=1709133449151000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKCgo7Xoy4QDFQAAAAAdAAAAABAH" alt="logo">
+    <img src="https://ecomm.design/wp-content/uploads/2016/04/deliveroo-full-1.jpg" alt="logo">
 
 <p>
     Nos esforzamos por mejorar la experiencia del usuario al implementar tecnologías como AJAX para realizar operaciones CRUD sin necesidad de recargar la página, y notificaciones por correo electrónico para informar a los gerentes de los cambios en sus restaurantes. También incluimos un formulario de valoración que permite a los usuarios expresar sus opiniones mediante opciones visuales y comentarios escritos.
