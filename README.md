@@ -1,5 +1,7 @@
 # Deliveroo
 <p>
+    Adrián Herráez,Carla Maldonado, Daniel Font y Julia Suarez
+</p>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Deliveroo_Logo.svg/2560px-Deliveroo_Logo.svg.png" alt="logo">
 </p>
 <p>
@@ -18,4 +20,10 @@
 </p>
 <p>
     En resumen, nuestro proyecto ofrece una plataforma sólida y eficiente que facilita a los usuarios la búsqueda y gestión de restaurantes. Esperamos que esta web sea útil para nuestra comunidad y sentamos las bases para futuras mejoras y desarrollos en el sistema.
+</p>
+
+<p>
+    <strong>Usuarios</strong>
+    Saramartinez@example.com
+    asdASD123@
 </p>
