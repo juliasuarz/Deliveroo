@@ -10,7 +10,7 @@
 <p>
     Nuestra web permite a los usuarios buscar restaurantes según el precio, la valoración de otros usuarios y el tipo de cocina que ofrecen. Además, cada restaurante debe tener al menos una fotografía para dar a los usuarios una idea visual de lo que pueden esperar. También diferenciamos entre dos tipos de usuarios: administradores y usuarios estándar, cada uno con sus propias capacidades y restricciones.
 </p>
-    <img src="https://ecomm.design/wp-content/uploads/2016/04/deliveroo-full-1.jpg" alt="logo">
+    <img src="https://sitedown.co.uk/static/screenshots/deliveroo.co.uk-screenshot.png" alt="logo">
 
 <p>
     Nos esforzamos por mejorar la experiencia del usuario al implementar tecnologías como AJAX para realizar operaciones CRUD sin necesidad de recargar la página, y notificaciones por correo electrónico para informar a los gerentes de los cambios en sus restaurantes. También incluimos un formulario de valoración que permite a los usuarios expresar sus opiniones mediante opciones visuales y comentarios escritos.
