@@ -7,7 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link href="style.less" rel="stylesheet">
+    <link href="../style.less" rel="stylesheet">
 </head>
 <body>
     <?php
@@ -123,4 +123,4 @@
         </div>
     </div>
 </div>
-    <script src="script.js"></script>
+    <script src="../script_val.js"></script>

@@ -40,9 +40,11 @@
                         </div>
                         <div>
                             <button class="opt">
-                                <i class="fa-solid fa-user"></i>
-                                <span>Account</span>
-                            </button>                 
+                                <a href="./inc/singup.php" >
+                                    <i class="fa-solid fa-user"></i>
+                                    <span>Account</span>
+                                </a>
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Creamos un array para almacenar los errores
@@ -29,20 +30,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = $_POST['password3'];
 
         // Consulta SQL para verificar las credenciales
-        $consulta = "SELECT * FROM usuarios WHERE email_usu = :email AND pwd_usu = :password";
+        $consulta = "SELECT * FROM usuarios WHERE email_usu = :email";
         $statement = $conexion->prepare($consulta);
         $statement->bindParam(':email', $email);
-        $statement->bindParam(':password', $password);
         $statement->execute();
         $usuario = $statement->fetch(PDO::FETCH_ASSOC);
 
-        // Verificamos si se encontró un usuario con las credenciales proporcionadas
+        // Verificamos si se encontró un usuario con el correo proporcionado
         if ($usuario) {
-            // Credenciales válidas, redireccionamos a la página de inicio
-            header("Location: home.php");
-            exit();
+            // Verificar la contraseña usando la función password_verify
+            if (password_verify($password, $usuario['pwd_usu'])) {
+                // Credenciales válidas, redireccionamos a la página de inicio
+                $_SESSION['id_user'] = $usuario['id_usu'];
+                header("Location: home.php");
+                exit();
+            } else {
+                // Si las credenciales no son válidas, mostramos un mensaje de error y redirigimos de vuelta al formulario
+                $errors['credenciales'] = "Las credenciales ingresadas son incorrectas.";
+                $_SESSION['errors'] = $errors;
+                header("Location: login.php");
+                exit();
+            }
         } else {
-            // Si las credenciales no son válidas, mostramos un mensaje de error y redirigimos de vuelta al formulario
+            // Si no se encontró un usuario con el correo proporcionado, mostramos un mensaje de error y redirigimos de vuelta al formulario
             $errors['credenciales'] = "Las credenciales ingresadas son incorrectas.";
             $_SESSION['errors'] = $errors;
             header("Location: login.php");
