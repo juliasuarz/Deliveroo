@@ -1,6 +1,6 @@
 # Deliveroo
 <p>
-    <img src="[https://ruta-de-tu-imagen.com/ejemplo.jpg](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Deliveroo_Logo.svg/2560px-Deliveroo_Logo.svg.png)" alt="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Deliveroo_Logo.svg/2560px-Deliveroo_Logo.svg.png" alt="logo">
 </p>
 <p>
     Desarrollamos un sitio web que funciona como una guía de restaurantes en nuestra ciudad, inspirado en la aplicación web Deliveroo. Utilizamos Laravel para construir esta plataforma que ofrece diversas funcionalidades para ayudar a los usuarios a encontrar y gestionar restaurantes de manera eficiente.
